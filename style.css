@@ -1,0 +1,238 @@
+*,
+*:before,
+*:after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* setting the variables */
+:root{
+
+     /* Colors */
+
+    /* Primary */
+    
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    
+    /* Neutral */
+    
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    
+    /* Gradients */
+    
+    --first :Linear, 135deg,from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --second:Linear, 135deg,from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+    
+   /* Typography */
+            
+    --Font-size: 16px;
+    --font-family:'Josefin Sans',sans-serif;
+
+    /* button */
+    --sl-input-height-medium: 48px;
+    --sl-input-border-width: 4px;
+    
+}
+/* set core body defaults */
+body{
+    font-family:var(--font-family);
+    background:var(--second);
+    font-size:16px;
+    color:var(--Soft-Red);
+    scroll-behavior:smooth;
+    min-height:100vh;
+    background-color:var(--second);
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+
+
+ 
+}
+.container{
+    max-width:900px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(200px,1fr) ;
+     grid-template-areas: "logo         photo"
+                          "description  photo";
+    border-radius:25px;
+    padding:10em 2em 0 0;
+
+    }
+.navbar{
+    grid-area: logo;
+}
+nav{
+    padding:2em;
+}
+.hero__container{
+    display:flex;
+    background:var(--first);
+    overflow: hidden;
+    }
+/* make images easy to work with */
+img {
+     max-width:100%;
+    
+}
+/* styling the hero page */
+ .hero__container .image-portable {
+  display:none;
+}
+.hero__container .image-desktop {
+    display:block;
+}
+
+.logo{
+    width:120px;
+   
+}
+.hero{
+    grid-area: photo;
+}
+
+/* styling the description of the heor page */
+.title-article {
+    text-transform:uppercase;
+    font-size:3rem;
+    color:var(--Desaturated-Red);
+    font-weight:200;
+
+    letter-spacing: 8px;
+}
+.title-span{
+    
+    text-transform:uppercase;
+    color:var(--Dark-Grayish-Red);
+    font-weight:500;
+    font-size:3rem;
+    letter-spacing:8px;
+}
+p{
+font-size:1rem;
+color:var(--Desaturated-Red);
+  margin-top:1em;
+  letter-spacing:0.8px;
+  line-height:1.6;
+
+}
+
+.article{
+  
+    padding:2em;
+    grid-area:description;
+}
+
+/* styling the form */
+
+input{
+    font-family:inherit;
+    font-size:0.9rem;
+    width:100%;
+    margin:1.6rem 0;
+    padding:1em;
+    color:var(--Desaturated-Red);
+    border-radius:25px;
+    border:0.5px solid var(--Desaturated-Red);
+    opacity:2;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(242,123,135,0.21);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(242,123,135,0.21);
+    box-shadow: 10px 10px 5px 0px rgba(242,123,135,0.21);
+}
+form{
+    position:relative;
+}
+.pink{
+    position:absolute;
+    top:24px;
+    right:0.5px;
+}
+
+/* button */
+.pink::part(base)
+{
+    border-radius:25px;
+    /* background-color: var(--Desaturated-Red); */
+    color: white;
+    font-size: 1.125rem;
+    background: rgb(233, 153, 160);
+    background: linear-gradient(346deg, rgb(228, 141, 141) 0%, rgba(239,160,160,0.6024096385542168) 100%); 
+    box-shadow: 10px 10px 5px -3px rgba(219,167,167,0.22);
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(219,167,167,0.22);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(219,167,167,0.22); 
+    border:none;
+     transition: var(--sl-transition-medium) transform ease, var(--sl-transition-medium) border ease;
+}
+
+.pink::part(base):hover {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+.error{
+    position:absolute;
+    top:35px;
+    right:60px;
+   
+
+}
+.hidden{
+    display:none
+}
+
+/* make it responsive  */
+
+@media (max-width:375px){
+    .container{
+        grid-template-columns:1fr;
+        grid-template-areas: "logo"
+                             "photo"
+                            "description";
+        width:90%;
+        padding:0;
+    }
+
+    .hero__container .image-portable {
+   
+        display:block;
+        /* display:block; */
+        
+     
+     }
+     .hero__container .image-desktop {
+         display:none;
+     }
+
+     .hero__container, .article{
+        text-align:center;
+     }
+}
+
+@media (max-width:700px){
+    .container{
+        max-width: 400px;
+        grid-template-columns:1fr;
+        grid-template-areas: "logo"
+                             "photo"
+                            "description";
+         width:90%; 
+         padding:1em;
+       
+    }
+
+    .hero__container .image-portable {
+   
+        display:block;
+       
+     }
+     .hero__container .image-desktop {
+         display:none;
+     }
+
+     .hero__container, .article{
+        text-align:center;
+     }
+}
+

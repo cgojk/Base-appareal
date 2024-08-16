@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+ 
+</head>
+<body>
+<main class="container">
+     <navbar  class="'navbar ">
+        <nav>
+          <img class="logo" src="images/logo.svg" alt="logo company Base Apparel the title appears beside a circle colour pink">
+        </nav>
+      </navbar>
+   
+            <header class="hero">
+                 <div class="hero__container ">
+                    <img class="image-portable"src="images/hero-mobile.jpg" alt="woman showing her her jawlery"> 
+                    <img class="image-desktop"src="images/hero-desktop.jpg" alt="" class="image-desktop">
+                 </div>
+            </header>
+
+          <section class="article ">
+                <h1 class="title-article">We're</h1>
+              <span class="title-span"> coming soon </span>
+                <p class="paragraph-article">
+                  Hello fellow shoppers! We're currently building our new fashion store. 
+                  Add your email below to stay up-to-date with announcements and our launch deals.
+                </p>
+                  <form class="login-form">
+                      <!-- <sl-input placeholder="Email Address"></sl-input> -->
+                        <input type="text" name="email" placeholder="n.barbie@nasa.com" required>
+                        
+                        <sl-button class="pink">
+                          <sl-icon class="icon_button"name="arrow-right" label="left-arrow" href="http://example.com" target="_blank"></sl-icon>
+                          </sl-button>
+                          <p id="message"></p>
+                          <img class="error hidden"src="images/icon-error.svg" alt="error icon">
+                    </form>
+            </section>
+   
+</main>
+  
+  
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/button/button.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/components/input/input.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
